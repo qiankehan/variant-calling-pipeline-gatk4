@@ -126,7 +126,7 @@ ENV SNPEFF_HOME ${APPS_ROOT}/snpeff/${SNPEFF_VERSION}
 ENV SNPEFF_JAR ${SNPEFF_HOME}/snpEff.jar
 ENV SNPSIFT_JAR ${SNPEFF_HOME}/SnpSift.jar
 
-RUN wget -O snpEff_v${SNPEFF_VERSION}_core.zip  https://sourceforge.net/projects/snpeff/files/snpEff_v${SNPEFF_VERSION}_core.zip/download# \
+RUN wget --no-check-certificate -O snpEff_v${SNPEFF_VERSION}_core.zip  https://sourceforge.net/projects/snpeff/files/snpEff_v${SNPEFF_VERSION}_core.zip/download# \
         && mkdir ${APPS_ROOT}/snpeff \
         && unzip snpEff_v${SNPEFF_VERSION}_core.zip \
         && mv snpEff ${APPS_ROOT}/snpeff/${SNPEFF_VERSION}
